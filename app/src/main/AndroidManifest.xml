@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.androidapp.navweiandroidv2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+            android:name=".App"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+          >
+        <activity
+                android:name=".presentation.locationdetails.filters.FiltersActivity"
+                android:label="@string/title_activity_filters"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".presentation.SplashActivity"
+                android:theme="@style/SplashTheme"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".presentation.parentlocation.HomeActivity"
+                android:theme="@style/AppTheme"
+                android:windowSoftInputMode="stateHidden"
+                android:screenOrientation="portrait"
+                android:label="@string/title_activity_choose_store">
+
+        </activity>
+        <activity
+                android:name=".presentation.locationdetails.MainActivity"
+                android:theme="@style/AppTheme"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustPan|stateHidden"
+                android:parentActivityName=".presentation.parentlocation.HomeActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.androidapp.navweiandroidv2.presentation.parentlocation.HomeActivity" />
+        </activity>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

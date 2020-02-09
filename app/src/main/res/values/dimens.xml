@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="layout_margin_small">8dp</dimen>
+
+
+    <dimen name="small_description_text_size">12sp</dimen>
+    <dimen name="toolbar_text_size">16sp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+    <dimen name="big_title_text_size">20sp</dimen>
+    <dimen name="store_title_text_size">24sp</dimen>
+    <dimen name="description_text_size">14sp</dimen>
+    <dimen name="img_size_24">24dp</dimen>
+    <dimen name="tabbar_text_size">9sp</dimen>
+
+
+    <dimen name="image_width">160dp</dimen>
+
+    <dimen name="design_fab_image_size" tools:override="true">56dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="bottom_navigation_icon_size" tools:override="true">50dp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">74dp</dimen>
+    <dimen
+            name="design_bottom_navigation_text_size"
+            tools:override="true">8sp </dimen>
+
+    <dimen
+            name="design_bottom_navigation_active_text_size"
+            tools:override="true">9sp </dimen>
+    <dimen name="ic_menu_width">61dp</dimen>
+    <dimen name="ic_menu_height">28dp</dimen>
+</resources>

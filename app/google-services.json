@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "938375202961",
+    "firebase_url": "https://navweiandroidv2.firebaseio.com",
+    "project_id": "navweiandroidv2",
+    "storage_bucket": "navweiandroidv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938375202961:android:9047c5f3b6a8933ba49730",
+        "android_client_info": {
+          "package_name": "com.androidapp.navweiandroidv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938375202961-nc7jvg6p1kol2d34r6q9dmr4954oqu35.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androidapp.navweiandroidv2",
+            "certificate_hash": "31fac2109684cf88e2103f674ce6dd3c7c47e7c2"
+          }
+        },
+        {
+          "client_id": "938375202961-gjgcmabp28mvgpgk21bkh4hmv11osh2b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgNxRN0sqGexhH29ctsMNAJYAA4CJSSro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938375202961-gjgcmabp28mvgpgk21bkh4hmv11osh2b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+    <View
+            android:id="@+id/view_backround"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backround_transparent"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone">
+
+    </View>
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ToolbarTheme"
+                app:titleTextColor="@android:color/white">
+            android:background="@color/title_color">
+
+            <TextView
+                    android:id="@+id/tv_title_toolbar"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableRight="@drawable/ic_chevron_down"
+                    android:drawablePadding="8dp"
+                    android:textColor="@android:color/white" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+            android:id="@+id/tv_title_empty_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/empty_map_message"
+            android:textAlignment="center"
+            android:textColor="@color/light_text_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar" />
+
+
+    <com.androidapp.navweiandroidv2.presentation.locationdetails.maptab.view.MapView
+            android:id="@+id/map_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:contentDescription=""
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+            android:id="@+id/cv_menu_map"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/transparent"
+            android:elevation="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_menu"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/minifedStoreCard"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+            android:id="@+id/iv_escalator_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_white_border_dark_circle"
+            android:elevation="10dp"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/escalator_down"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/minifedStoreCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_lost_button" />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_lost_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="10dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_floor_list">
+
+        <ImageView
+                android:id="@+id/iv_lost_button"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_raise_your_hand_to_ask" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+            android:id="@+id/btn_show_path"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/shape_white_border_yellow_circle"
+            android:elevation="10dp"
+            android:fontFamily="@font/cairo_bold"
+            android:gravity="center"
+            android:text="GO"
+            android:textColor="@color/title_color"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/minifedStoreCard"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+            android:id="@+id/cv_menu_map_peopleup"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/transparent"
+            android:elevation="5dp"
+            android:foregroundGravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_peopleup"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/cv_menu_map"
+            app:layout_constraintEnd_toEndOf="@+id/cv_menu_map"
+            app:layout_constraintStart_toStartOf="@+id/cv_menu_map" />
+
+    <ImageView
+            android:id="@+id/cv_menu_map_flag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="40dp"
+            android:elevation="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_flagms"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/cv_menu_map"
+            app:layout_constraintEnd_toStartOf="@+id/cv_menu_map"
+            app:layout_constraintTop_toTopOf="@+id/cv_menu_map" />
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_floor_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_menu_map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_destination_store_label">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_filter_floors_list"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_source_store_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_source_store_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                    android:id="@+id/et_source_store_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_map_source"
+                    android:drawablePadding="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/cairo"
+                    android:gravity="center_vertical"
+                    android:hint="@string/title_start_point_hint"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                    android:id="@+id/v_source_store_line"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:background="@drawable/shape_dashed_line"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_source_store_label" />
+
+            <ListView
+                    android:id="@+id/rv_source_stores_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="vertical"
+                    android:focusable="false"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_source_store_line" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_destination_store_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_source_store_label">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_destination_store_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <EditText
+                    android:id="@+id/et_destination_store_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_pin_outline_grey"
+                    android:drawablePadding="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/cairo"
+                    android:gravity="center_vertical"
+                    android:hint="@string/title_where_to"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                    android:id="@+id/v_destination_store_line"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:background="@drawable/shape_dashed_line"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_destination_store_label" />
+
+            <ListView
+                    android:id="@+id/rv_destination_stores_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="vertical"
+                    android:focusable="false"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_destination_store_line" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_source_and_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_source_store_label">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_source_selected_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                    android:id="@+id/et_source_selected_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_map_source"
+                    android:drawablePadding="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/cairo"
+                    android:gravity="center_vertical"
+                    android:hint="@string/title_start_point_hint"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                    android:id="@+id/et_destination_selected_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_pin_outline_grey"
+                    android:drawablePadding="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/cairo"
+                    android:gravity="center_vertical"
+                    android:hint="@string/title_find_destination"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line" />
+
+            <View
+                    android:id="@+id/line"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/light_gray"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_close_source_destination_close_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_source_selected_label" />
+
+            <ImageView
+                    android:id="@+id/iv_close_source_destination_close_button"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_close_circle_white"
+                    android:padding="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.androidapp.navweiandroidv2.presentation.locationdetails.maptab.view.InformationBoxView
+            android:id="@+id/information_box_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar" />
+
+
+    <com.androidapp.navweiandroidv2.presentation.locationdetails.maptab.view.StoreCardView
+            android:id="@+id/storeCardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/minifedStoreCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+    <com.androidapp.navweiandroidv2.presentation.locationdetails.maptab.view.MinifedStoreCardView
+            android:id="@+id/minifedStoreCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_loading"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+        <ProgressBar
+                android:id="@+id/pb_map"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/minified_store_card"
+        android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        <ImageView
+                android:id="@+id/iv_location_image"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/iv_store_logo"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="118dp"
+                android:background="@drawable/shape_white_circle"
+                android:elevation="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_text"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+                android:id="@+id/tv_mall_store_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@color/title_color"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_store_logo"
+                tools:text="Adidas Original" />
+
+        <TextView
+                android:id="@+id/tv_mall_store_open_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape_close_store_backround"
+                android:fontFamily="@font/cairo_semibold"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="Close"
+                android:textAlignment="center"
+                android:textColor="@color/store_close_color"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_mall_store_open_close_statu"
+                app:layout_constraintEnd_toStartOf="@+id/tv_mall_store_open_close_statu"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_mall_store_open_close_statu" />
+
+        <TextView
+                android:id="@+id/tv_mall_store_open_close_statu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:singleLine="true"
+                android:text="Closes at 9PM"
+                android:textColor="@color/light_text_color"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/tv_mall_store_open_time"
+                app:layout_constraintTop_toBottomOf="@+id/tv_store_sub_title" />
+
+        <TextView
+                android:id="@+id/tv_store_sub_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/el_messiri_medium"
+                android:textAlignment="center"
+                android:textColor="@color/light_text_color"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mall_store_title"
+                tools:text="Fashion • Ground Floor" />
+
+
+        <TextView
+                android:id="@+id/tv_locate_on_map_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/shape_light_border_backround"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:text="@string/title_view_store_page"
+                android:textAlignment="center"
+                android:textColor="@color/light_text_color"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_navigate_to_store"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mall_store_open_time" />
+
+        <TextView
+                android:id="@+id/tv_navigate_to_store"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/shape_yellow_rectangle_with_corner"
+                android:drawableRight="@drawable/ic_directions"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/cairo_bold"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:text="@string/title_navigate_to_store"
+                android:textColor="@color/title_color"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_locate_on_map_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_locate_on_map_button"
+                app:layout_constraintTop_toTopOf="@+id/tv_locate_on_map_button" />
+
+
+        <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/borders_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_locate_on_map_button" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_store_offers"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+                android:id="@+id/iv_close_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_oval_arrow_down_white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

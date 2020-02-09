@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icons">
+        <item>@drawable/ic_flagms</item>
+        <item>@drawable/ic_peopleup</item>
+    </array>
+    <array name="colors">
+        <item>@android:color/white</item>
+        <item>@android:color/white</item>
+    </array>
+</resources>

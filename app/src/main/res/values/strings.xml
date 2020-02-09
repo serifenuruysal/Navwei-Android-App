@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Navwei</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_mall">MALL</string>
+    <string name="title_offers">OFFERS</string>
+    <string name="title_map">MAP</string>
+    <string name="title_more">MORE</string>
+    <string name="title_hello_text">Hello, \nwhere to today ?</string>
+    <string name="search_title">Search Malls, museums etc...</string>
+    <string name="title_where_to">Where to?</string>
+    <string name="more_mall_info">Mall Info</string>
+    <string name="more_privacy">Privacy and Policy</string>
+    <string name="more_terms">Term of Use</string>
+    <string name="more_hiw">How it works</string>
+    <string name="title_activity_choose_store">ChooseStoreActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_apply_filters">Apply filters</string>
+    <string name="title_filter_mall">Mall</string>
+    <string name="title_filter_airport">Airport</string>
+    <string name="title_activity_filters">FiltersActivity</string>
+    <string name="title_filters">Filters</string>
+    <string name="title_category">Category</string>
+    <string name="title_all">All</string>
+    <string name="title_floor">Floor</string>
+    <string name="title_parking_floor">Parking Floor</string>
+    <string name="title_stores_with_offers">Stores with offers</string>
+    <string name="title_store_floors">Store floor</string>
+    <string name="title_store_category">Store category</string>
+    <string name="title_near_you">Near you</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_more_toolbar">More</string>
+    <string name="title_getting_here">Getting Here</string>
+    <string name="title_multiple_selection">Multiple Selection</string>
+    <string name="title_shops_count">%1$s Shops</string>
+    <string name="title_browse_all_stores">Browse all stores</string>
+    <string name="title_empty_list">No store found.</string>
+    <string name="title_empty_offer_list">No offer found.</string>
+    <string name="title_save_checkpoint">Saved as your checkpoint</string>
+    <string name="title_locate_on_map">Locate on the Map</string>
+    <string name="title_navigate_to_store">Navigate to store</string>
+    <string name="title_store_offer">Offers</string>
+    <string name="title_store">Store</string>
+    <string name="title_more_offers">More offers</string>
+    <string name="title_expire">Expires %1$s</string>
+    <string name="title_open">Open</string>
+    <string name="title_find_destination">Find your destination..</string>
+    <string name="title_start_point_hint">Find your starting point..</string>
+    <string name="title_shops_count_hint">Search %1$s stores</string>
+    <string name="title_offers_count_hint">Search %1$d offers</string>
+    <string name="title_showw_all_offer">Show all offers</string>
+    <string name="title_stores">Stores</string>
+    <string name="title_view_store_page">View Store Page</string>
+    <string name="back">"&lt;"</string>
+    <string name="next">Next</string>
+
+    <string name="title_map_escalator_to">Escalator to %1$s</string>
+
+    <string name="title_map_go_straight">Go straight</string>
+    <string name="title_map_slight_left">Take a slight left</string>
+    <string name="title_map_slight_right">Take a slight right</string>
+    <string name="title_map_right">Take a right</string>
+    <string name="title_map_left">Take a left</string>
+    <string name="title_map_slight_left_to">Take a slight left to %1$s</string>
+    <string name="title_map_slight_right_to">Take a slight right to %1$s</string>
+    <string name="title_map_take_left_to">Take a left to %1$s</string>
+    <string name="title_map_take_right_to">Take a right to %1$s</string>
+    <string name="title_map_go_straight_to">Go straight to %1$s</string>
+
+    <string name="finish_route">Finish route</string>
+
+    <string name="title_activate_handicap_mode">Do you confirm activation of the <b>handicap navigation mode ?</b> </string>
+    <string name="title_are_you_lost">You are lost ? Would you like to change your <b>starting point ?</b> </string>
+
+    <string name="min">min</string>
+
+    <string name="open_time">Closes at %1$s</string>
+    <string name="close_time">Opening at %1$s</string>
+    <string name="closing_soon_time">%1$s</string>
+
+    <string name="Monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="Wednesday">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+
+    <string name="open">Open</string>
+    <string name="close">Closed</string>
+    <string name="closing_soon">Closes Soon</string>
+    <string name="empty_map_message">There is no related maps to this location</string>
+</resources>

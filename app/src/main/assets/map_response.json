@@ -1,0 +1,262 @@
+{
+  "message": "The request has been successfully executed",
+  "location_map": {
+    "picture_url": "https://navwei-staging.s3.eu-west-1.amazonaws.com/location/bafb3806-131f-4998-890f-53e49dd3bf53/map.svg?t=1575893681908",
+    "svg": "<svg id=\"SvgjsSvg1006\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:svgjs=\"http://svgjs.com/svgjs\"><defs id=\"SvgjsDefs1007\"></defs><circle id=\"point776712\" r=\"6\" cx=\"782\" cy=\"718\" fill=\"#022333\" stroke=\"#ababbd\"></circle><circle id=\"point851323\" r=\"6\" cx=\"857\" cy=\"329\" fill=\"#022333\" stroke=\"#ababbd\"></circle><circle id=\"point518641\" r=\"6\" cx=\"524\" cy=\"647\" fill=\"#022333\" stroke=\"#ababbd\"></circle><circle id=\"point193598\" r=\"6\" cx=\"199\" cy=\"604\" fill=\"#022333\" stroke=\"#ababbd\"></circle><circle id=\"point55553\" r=\"6\" cx=\"61\" cy=\"559\" fill=\"#022333\" stroke=\"#ababbd\"></circle><circle id=\"point97444\" r=\"6\" cx=\"103\" cy=\"450\" fill=\"#ffffff\" stroke=\"#ababbd\"></circle><circle id=\"point243505\" r=\"6\" cx=\"249\" cy=\"511\" fill=\"#ffffff\" stroke=\"#ababbd\"></circle><circle id=\"point364534\" r=\"6\" cx=\"370\" cy=\"540\" fill=\"#ffffff\" stroke=\"#ababbd\"></circle><circle id=\"point500530\" r=\"6\" cx=\"506\" cy=\"536\" fill=\"#ffffff\" stroke=\"#ababbd\"></circle><circle id=\"point694502\" r=\"6\" cx=\"700\" cy=\"508\" fill=\"#ffffff\" stroke=\"#ababbd\"></circle><circle id=\"point664396\" r=\"6\" cx=\"670\" cy=\"402\" fill=\"#ffffff\" stroke=\"#ababbd\"></circle><circle id=\"point384396\" r=\"6\" cx=\"390\" cy=\"402\" fill=\"#ffffff\" stroke=\"black\"></circle><line id=\"link55553\" x1=\"61\" y1=\"559\" x2=\"103\" y2=\"450\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link97444\" x1=\"103\" y1=\"450\" x2=\"249\" y2=\"511\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link243505\" x1=\"249\" y1=\"511\" x2=\"370\" y2=\"540\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link364534\" x1=\"370\" y1=\"540\" x2=\"506\" y2=\"536\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link500530\" x1=\"506\" y1=\"536\" x2=\"700\" y2=\"508\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link694502\" x1=\"700\" y1=\"508\" x2=\"670\" y2=\"402\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link664396\" x1=\"670\" y1=\"402\" x2=\"857\" y2=\"329\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link776712\" x1=\"782\" y1=\"718\" x2=\"700\" y2=\"508\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link518641\" x1=\"524\" y1=\"647\" x2=\"506\" y2=\"536\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link193598\" x1=\"199\" y1=\"604\" x2=\"249\" y2=\"511\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line><line id=\"link384396\" x1=\"390\" y1=\"402\" x2=\"370\" y2=\"540\" stroke-linecap=\"round\" stroke=\"#ff0066\" stroke-width=\"4\"></line></svg>",
+    "data": {
+      "width": 1552,
+      "height": 1061,
+      "elements": [
+        {
+          "id": "point776712",
+          "type": "point",
+          "coord": {
+            "x": 776,
+            "y": 712
+          },
+          "category": "slot",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point851323",
+          "type": "point",
+          "coord": {
+            "x": 851,
+            "y": 323
+          },
+          "category": "slot",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point518641",
+          "type": "point",
+          "coord": {
+            "x": 518,
+            "y": 641
+          },
+          "category": "slot",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point193598",
+          "type": "point",
+          "coord": {
+            "x": 193,
+            "y": 598
+          },
+          "category": "slot",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point55553",
+          "type": "point",
+          "coord": {
+            "x": 55,
+            "y": 553
+          },
+          "category": "slot",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point97444",
+          "type": "point",
+          "coord": {
+            "x": 97,
+            "y": 444
+          },
+          "category": "unset",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point243505",
+          "type": "point",
+          "coord": {
+            "x": 243,
+            "y": 505
+          },
+          "category": "unset",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point364534",
+          "type": "point",
+          "coord": {
+            "x": 364,
+            "y": 534
+          },
+          "category": "unset",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point500530",
+          "type": "point",
+          "coord": {
+            "x": 500,
+            "y": 530
+          },
+          "category": "unset",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point694502",
+          "name": "Escalator to Ground",
+          "type": "point",
+          "coord": {
+            "x": 694,
+            "y": 502
+          },
+          "category": "unset",
+          "logo_url": "https://navwei.netlify.com/assets/images/icons/stairs.png",
+          "externalLink": [
+            {
+              "slot": "point792995",
+              "toId": "40b52ce8-2b0e-4775-b933-2cc90a6eb1b3",
+              "toName": "Ground"
+            }
+          ]
+        },
+        {
+          "id": "point664396",
+          "type": "point",
+          "coord": {
+            "x": 664,
+            "y": 396
+          },
+          "category": "unset",
+          "externalLink": [
+
+          ]
+        },
+        {
+          "id": "point384396",
+          "name": "Escalator to Floor 2",
+          "type": "point",
+          "coord": {
+            "x": 384,
+            "y": 396
+          },
+          "category": "unset",
+          "logo_url": "https://navwei.netlify.com/assets/images/icons/stairs.png",
+          "externalLink": [
+            {
+              "slot": "point572770",
+              "toId": "c4102482-5020-4d83-b744-6ded24cb1af4",
+              "toName": "Floor 2"
+            }
+          ]
+        },
+        {
+          "id": "link55553",
+          "type": "link",
+          "to_id": "point97444",
+          "from_id": "point55553"
+        },
+        {
+          "id": "link97444",
+          "type": "link",
+          "to_id": "point243505",
+          "from_id": "point97444"
+        },
+        {
+          "id": "link243505",
+          "type": "link",
+          "to_id": "point364534",
+          "from_id": "point243505"
+        },
+        {
+          "id": "link364534",
+          "type": "link",
+          "to_id": "point500530",
+          "from_id": "point364534"
+        },
+        {
+          "id": "link500530",
+          "type": "link",
+          "to_id": "point694502",
+          "from_id": "point500530"
+        },
+        {
+          "id": "link694502",
+          "type": "link",
+          "to_id": "point664396",
+          "from_id": "point694502"
+        },
+        {
+          "id": "link664396",
+          "type": "link",
+          "to_id": "point851323",
+          "from_id": "point664396"
+        },
+        {
+          "id": "link776712",
+          "type": "link",
+          "to_id": "point694502",
+          "from_id": "point776712"
+        },
+        {
+          "id": "link518641",
+          "type": "link",
+          "to_id": "point500530",
+          "from_id": "point518641"
+        },
+        {
+          "id": "link193598",
+          "type": "link",
+          "to_id": "point243505",
+          "from_id": "point193598"
+        },
+        {
+          "id": "link384396",
+          "type": "link",
+          "to_id": "point364534",
+          "from_id": "point384396"
+        }
+      ],
+      "element_location": [
+        {
+          "slot": "point776712",
+          "locationId": "198b6dc6-ca67-4a44-90b1-065cf54080d3",
+          "locationName": "Apple"
+        },
+        {
+          "slot": "point851323",
+          "locationId": "631a6297-5bb9-4d9e-8ba7-f9cd0edf73bf",
+          "locationName": "Adidas"
+        },
+        {
+          "slot": "point518641",
+          "locationId": "f252c3bd-b3da-4049-91f9-28c83291c048",
+          "locationName": "Fred Perry"
+        },
+        {
+          "slot": "point193598",
+          "locationId": "3bf35e7a-69e8-4fa0-8a28-af3868dcfdb6",
+          "locationName": "Nespresso"
+        },
+        {
+          "slot": "point55553",
+          "locationId": "19876026-9672-4c1a-b3c8-a05808cec621",
+          "locationName": "The North Face"
+        }
+      ]
+    }
+  }
+}

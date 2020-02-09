@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compile_sdk_version
+    defaultConfig {
+        minSdkVersion rootProject.ext.mini_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode rootProject.ext.version_code
+        versionName rootProject.ext.version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':entity')
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation "com.google.dagger:dagger:${rootProject.ext.dagger2_vesion}"
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjava2_version}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroid_version}"
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit2_version}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofit2_version}"
+    implementation "com.google.code.gson:gson:${rootProject.ext.gson_version}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofit2_version}"
+    testImplementation "junit:junit:${rootProject.ext.junit_version}"
+    testImplementation "org.powermock:powermock-module-junit4:${rootProject.ext.powermock_version}"
+    testImplementation "org.powermock:powermock-api-mockito2:${rootProject.ext.powermock_version}"
+    testImplementation "org.mockito:mockito-core:${rootProject.ext.mockito_version}"
+
+
+
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/transparent"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+
+                app:toolbarId="@+id/toolbar">
+
+            <ImageView
+                    android:id="@+id/app_bar_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+
+                    android:src="@color/white"
+                    app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tv_mall_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/cairo_bold"
+                    android:textColor="@color/title_color"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Mall Name" />
+
+            <TextView
+                    android:id="@+id/tv_mall_name_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/el_messiri"
+                    android:textColor="@color/light_text_color"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_mall_name"
+                    tools:text="Sub title" />
+
+            <TextView
+                    android:id="@+id/tv_mall_shop_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/el_messiri"
+                    android:textColor="@color/light_text_color"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_mall_icon"
+                    app:layout_constraintStart_toEndOf="@+id/tv_mall_icon"
+                    app:layout_constraintTop_toTopOf="@+id/tv_mall_icon"
+                    tools:text="787 Shops" />
+
+            <TextView
+                    android:id="@+id/tv_mall_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/cairo"
+                    android:textColor="@color/title_color"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_mall_icon"
+                    tools:text="Store Description.." />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_schedule_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line">
+
+                <TextView
+                        android:id="@+id/tv_mall_open_close_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/shape_open_store_backround"
+                        android:padding="8dp"
+                        android:text="Open"
+                        android:textColor="@color/store_open_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/tv_mall_name_close_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/el_messiri_medium"
+                        android:text="Closes 1 AM"
+                        android:textColor="@color/light_text_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_open_close_status"
+                        app:layout_constraintStart_toEndOf="@+id/tv_mall_open_close_status"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_open_close_status" />
+
+                <ImageView
+                        android:id="@+id/iv_arrow_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_name_close_time"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_name_close_time"
+                        app:srcCompat="@drawable/ic_chevron_down_black" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_open_close_hours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_schedule_time"
+                    tools:visibility="visible">
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="Monday"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="Tuesday"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_mall_weekday1" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="Wednesday"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_mall_weekday2" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="Thursday"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_mall_weekday3" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="Friday"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_mall_weekday4" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="Saturday"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_mall_weekday5" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="Sunday"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_mall_weekday6" />
+
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday1_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="07:00 - 22:00"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_weekday1"
+                        app:layout_constraintStart_toEndOf="@+id/tv_mall_weekday1"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_weekday1" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday2_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="07:00 - 22:00"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_weekday2"
+                        app:layout_constraintStart_toEndOf="@+id/tv_mall_weekday2"
+                        app:layout_constraintStart_toStartOf="@+id/tv_mall_weekday1_time"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_weekday2" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday3_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="07:00 - 22:00"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_weekday3"
+                        app:layout_constraintStart_toEndOf="@+id/tv_mall_weekday3"
+                        app:layout_constraintStart_toStartOf="@+id/tv_mall_weekday2_time"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_weekday3" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday4_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="07:00 - 22:00"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_weekday4"
+                        app:layout_constraintStart_toEndOf="@+id/tv_mall_weekday4"
+                        app:layout_constraintStart_toStartOf="@+id/tv_mall_weekday3_time"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_weekday4" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday5_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="07:00 - 22:00"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_weekday5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_mall_weekday5"
+                        app:layout_constraintStart_toStartOf="@+id/tv_mall_weekday4_time"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_weekday5" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday6_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="07:00 - 22:00"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_weekday6"
+                        app:layout_constraintStart_toEndOf="@+id/tv_mall_weekday6"
+                        app:layout_constraintStart_toStartOf="@+id/tv_mall_weekday5_time"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_weekday6" />
+
+                <TextView
+                        android:id="@+id/tv_mall_weekday7_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/el_messiri_bold"
+                        android:text="07:00 - 22:00"
+                        android:textColor="@color/title_color"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_mall_weekday7"
+                        app:layout_constraintStart_toEndOf="@+id/tv_mall_weekday7"
+                        app:layout_constraintStart_toStartOf="@+id/tv_mall_weekday6_time"
+                        app:layout_constraintTop_toTopOf="@+id/tv_mall_weekday7" />
+
+                <View
+                        android:id="@+id/line5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/borders_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_mall_weekday7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/borders_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_mall_description" />
+
+            <ImageView
+                    android:id="@+id/tv_mall_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_group_9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_mall_name_sub_title" />
+
+
+            <TextView
+                    android:id="@+id/tv_apply_filters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/shape_yellow_rectangle_with_corner"
+                    android:fontFamily="@font/cairo_bold"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/title_getting_here"
+                    android:textColor="@color/title_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_open_close_hours" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/iv_mall_logo"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_margin="@dimen/fab_margin"
+            android:background="@drawable/shape_white_circle"
+            android:elevation="5dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dummy_store_con"
+            android:visibility="gone"
+            app:layout_anchor="@+id/app_bar_image"
+            app:layout_anchorGravity="bottom|left|end" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/tv_offer_item_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_white_circle"
+            android:elevation="10dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/dummy_store_con" />
+
+
+    <TextView
+            android:id="@+id/tv_filtre_floor_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/cairo_bold"
+            android:textColor="@color/title_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_offer_item_logo"
+            app:layout_constraintEnd_toStartOf="@+id/iv_filters_category_seleted_icon"
+            app:layout_constraintStart_toEndOf="@+id/tv_offer_item_logo"
+            app:layout_constraintTop_toTopOf="@+id/tv_offer_item_logo"
+            tools:text="Category name" />
+
+    <View
+            android:id="@+id/view8"
+            android:layout_width="327dp"
+            android:layout_height="1dp"
+            android:background="@color/borders_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_filtre_floor_item_title" />
+
+
+    <ImageView
+            android:id="@+id/iv_filters_category_seleted_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_filtre_floor_item_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_filtre_floor_item_title"
+            app:srcCompat="@drawable/ic_checkmark_circle_2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#E2E2E2</color>
+    <color name="colorPrimaryDark">#26282A</color>
+    <color name="colorPrimary">#F1C046</color>
+    <color name="title_color">#26282A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#F1C046</color>
+    <color name="dark_yellow">#644900</color>
+    <color name="purple">#94A3DA</color>
+    <color name="borders_color">#E2E2E2</color>
+    <color name="line_color_more">#999999</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="store_close_color">#FF4A4A</color>
+    <color name="store_open_color">#11C290</color>
+    <color name="store_close_soon_color">#F18646</color>
+    <color name="light_text_color">#999999</color>
+    <color name="light_gray">#f5f5f5</color>
+    <color name="dot_colour">#707070</color>
+    <color name="store_open_color_light">#DBF6EE</color>
+    <color name="store_close_color_light">#FFE4E4</color>
+    <color name="store_close_soon_color_light">#FDEDE3</color>
+    <color name="yellow_point">#66F1C046</color>
+    <color name="line_color">#F0B62A</color>
+    <color name="backround_transparent">#8026282A</color>
+
+</resources>
