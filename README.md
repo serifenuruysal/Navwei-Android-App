@@ -1,10 +1,5 @@
 # Navwei Android V2 - Kotlin
-
-***This is an Android Clean Architecture  project***
-Android Application under MVVM, UseCases and Repositories architecture using:
-Android Architecture Components: ViewModel and LiveData
-Rx2
-Dagger 2 for Android
+This is Navwei Android app project Version 2
 
 ## Benefit
 
