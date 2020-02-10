@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Android Application Rules"
+  xmlns="http://pmd.sf.net/ruleset/1.0.0"
+  xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd"
+  xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+  <description>Custom ruleset for Wynn Android application</description>
+
+  <exclude-pattern>.*/R.java</exclude-pattern>
+  <exclude-pattern>.*/gen/.*</exclude-pattern>
+  <!--Might also add rest service request/response objects for exclusion-->
+
+  <rule ref="rulesets/java/android.xml"/>
+  <rule ref="rulesets/java/clone.xml"/>
+  <rule ref="rulesets/java/finalizers.xml"/>
+  <rule ref="rulesets/java/imports.xml">
+    <exclude name="TooManyStaticImports"/>
+  </rule>
+  <rule ref="category/java/bestpractices.xml/UnusedLocalVariable">
+    <properties>
+      <property name="violationSuppressRegex" value=".*'ignored'.*"/>
+    </properties>
+  </rule>
+
+  <rule ref="category/java/bestpractices.xml">'
+    <exclude name="GuardLogStatement"/>
+  </rule>
+  <rule ref="rulesets/java/braces.xml"/>
+  <rule ref="rulesets/java/strings.xml"/>
+  <rule ref="rulesets/java/basic.xml"/>
+  <rule ref="rulesets/java/naming.xml">
+    <exclude name="LongVariable"/>
+    <exclude name="ShortVariable"/>
+    <exclude name="MethodNamingConventions"/>
+    <exclude name="AbstractNaming"/>
+  </rule>
+  <rule ref="rulesets/java/design.xml">
+    <exclude name="UseVarargs"/>
+    <exclude name="TooFewBranchesForASwitchStatement"/>
+  </rule>
+
+  <rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals">
+    <properties>
+      <property name="separator" value=","/>
+      <property name="exceptionList" value="unused"/>
+    </properties>
+
+  </rule>
+
+  <rule ref="rulesets/java/design.xml/ClassWithOnlyPrivateConstructorsShouldBeFinal">
+    <properties>
+      <property name="violationSuppressXPath" value="//ClassOrInterfaceDeclaration['.*Module']"/>
+    </properties>
+  </rule>
+
+  <rule ref="rulesets/java/design.xml/AbstractClassWithoutAbstractMethod">
+    <properties>
+      <property name="violationSuppressXPath" value="//ClassOrInterfaceDeclaration['.*Module']"/>
+    </properties>
+  </rule>
+
+  <rule ref="rulesets/java/design.xml/AbstractClassWithoutAnyMethod">
+    <properties>
+      <property name="violationSuppressXPath" value="//ClassOrInterfaceDeclaration['.*Module']"/>
+    </properties>
+  </rule>
+
+
+</ruleset>

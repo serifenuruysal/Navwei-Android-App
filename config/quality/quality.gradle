@@ -1,0 +1,98 @@
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+
+repositories {
+  jcenter()
+  mavenLocal()
+}
+
+configurations {
+  detekt
+}
+
+def VC_DETEKT = '1.0.0-RC12'
+
+dependencies {
+
+  checkstyle 'com.puppycrawl.tools:checkstyle:8.17'
+  detekt "io.gitlab.arturbosch.detekt:detekt-cli:$VC_DETEKT"
+  detekt "io.gitlab.arturbosch.detekt:detekt-formatting:$VC_DETEKT"
+}
+
+def qualityConfigDir = "$project.rootDir/config/quality";
+def reportsDir = "$project.buildDir/reports"
+
+task checkstyle(type: Checkstyle, group: 'Verification', description: 'Runs code style checks') {
+  configFile file("$qualityConfigDir/checkstyle/checkstyle-config.xml")
+  source 'src'
+  include '**/*.java', '**/*.xml'
+
+  reports {
+    xml.enabled = true
+    xml {
+      destination new File("$reportsDir/checkstyle/checkstyle.xml")
+    }
+  }
+
+  configProperties = ["checkstyle.cache.file": "$reportsDir/checkstyle/checkstyle-cache"]
+
+  classpath = files()
+}
+
+task findbugs(type: FindBugs,
+    group: 'Verification',
+    description: 'Inspect java bytecode for bugs',
+    dependsOn: ['compileWynnNewJerseyDebugSources', 'compileBetbullUkDebugSources']) {
+
+  ignoreFailures = false
+  effort = "max"
+  reportLevel = "high"
+  excludeFilter = new File("$qualityConfigDir/findbugs/android-exclude-filter.xml")
+  classes = files(
+      "$project.projectDir/build/intermediates/javac/wynnNewJerseyDebug/classes",
+      "$project.projectDir/build/intermediates/javac/betbullUkDebug/classes")
+
+  source 'src'
+  include '**/*.java'
+  exclude '**/gen/**'
+
+  reports {
+    html.enabled = true
+    html.destination = new File("$reportsDir/findbugs/findbugs.html")
+    xml.enabled = !html.enabled
+    xml.destination = new File("$reportsDir/findbugs/findbugs.xml")
+  }
+
+  classpath = files()
+}
+
+task pmd(type: Pmd, group: 'Verification', description: 'Inspect sourcecode for bugs') {
+  ruleSetFiles = files("$qualityConfigDir/pmd/pmd-ruleset.xml")
+  ignoreFailures = false
+  ruleSets = []
+
+  source 'src'
+  include '**/*.java'
+  exclude '**/gen/**'
+
+  reports {
+    xml.enabled = false
+    html.enabled = true
+    html {
+      destination new File("$reportsDir/pmd/pmd.html")
+    }
+  }
+}
+
+task detekt(type: JavaExec, group: 'Verification', description: 'Static code analysis for Kotlin') {
+  main = "io.gitlab.arturbosch.detekt.cli.Main"
+  classpath = configurations.detekt
+  def input = "$project.projectDir.absolutePath"
+  def config = "$qualityConfigDir/detekt/config.yml"
+  def filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+  def rulesets = ""
+  def params = ['-i', input, '-c', config, '-f', filters]
+  args(params)
+}
+
