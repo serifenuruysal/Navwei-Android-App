@@ -39,4 +39,4 @@ Base `UseCase` class handles the thread of Rx chains, it puts  whole chain on IO
 
 [The Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
 
-# navwei-android-v2
+
