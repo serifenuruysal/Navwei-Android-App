@@ -1,4 +1,5 @@
 # Navwei Android V2 - Kotlin
+You can check it out at the store: https://play.google.com/store/apps/details?id=com.androidapp.navweiandroidv2&hl=en&gl=US
 This is Navwei Android app project Version 2
 
 Find your way through the biggest malls in the UAE with this stylishly useful app. Rely on our in-mall navigation to guide you to the hottest trends, events and happenings. Whether you’re planning your trip or already in the mall, you’ll always be the first to know what’s happening.
