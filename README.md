@@ -5,7 +5,7 @@ Project web site: https://www.navwei.com/
 
 This is Navwei Android app project Version 2
 
-User find his way through the biggest malls in the UAE with this  useful app. Rely on our in-mall navigation to guide user to the hottest trends, events and happenings.
+With the use of this app user can find his way through the biggest malls in the shopping center or airport. Rely on navigation to guide user to the hottest trends, events and happenings.
 
 
 ## Approach of Clean Architecture 
