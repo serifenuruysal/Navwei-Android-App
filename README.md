@@ -7,10 +7,9 @@ This is Navwei Android app project Version 2 newest one at the store
 User find his way through the biggest malls in the UAE with this  useful app. Rely on our in-mall navigation to guide user to the hottest trends, events and happenings.
 
 
-
-
-## Approach of Clean Architecture for Android
+## Approach of Clean Architecture 
 There are 4 layers in the project: Data, Domain, Entity and Presentation(app), and the UI layer contains view and viewModels.
+And also [Dijkstra] (https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) Dijkstra algorithm applied for shortest path calculation.User navigation calculated between many store at different floors in the shopping center.
 
 
 ## Multi-threading
