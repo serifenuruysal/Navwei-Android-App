@@ -3,7 +3,7 @@ Project web site: https://www.navwei.com/
 [Video](https://www.instagram.com/p/B9L0W41AJYG/?utm_source=ig_web_button_share_sheet)
 
 
-This is Navwei Android app project Version 2 newest one at the store
+This is Navwei Android app project Version 2
 
 User find his way through the biggest malls in the UAE with this  useful app. Rely on our in-mall navigation to guide user to the hottest trends, events and happenings.
 
