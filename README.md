@@ -1,6 +1,7 @@
 # Navwei Android V2 - Kotlin
 Project web site: https://www.navwei.com/
-[Video](https://www.instagram.com/p/B9L0W41AJYG/?utm_source=ig_web_button_share_sheet)
+
+[Product Demo Video](https://www.instagram.com/p/B9L0W41AJYG/?utm_source=ig_web_button_share_sheet)
 
 
 This is Navwei Android app project Version 2
