@@ -2,6 +2,7 @@
 Project web site: https://www.navwei.com/
 
 [Product Demo Video](https://www.instagram.com/p/B9L0W41AJYG/?utm_source=ig_web_button_share_sheet)
+<img width="1116" alt="Screenshot 2023-04-19 at 16 26 32" src="https://user-images.githubusercontent.com/3584359/233125880-19b8ae39-0560-46f0-a2aa-1f4e74295046.png">
 
 
 This is Navwei Android app project Version 2
