@@ -3,13 +3,12 @@ Navwei Android V2 - Kotlin
 Project website: [Navwei]( https://www.navwei.com/)
 
 [Product Demo Video](https://www.instagram.com/p/B9L0W41AJYG/?utm_source=ig_web_button_share_sheet)
-<img width="1116" alt="Screenshot 2023-04-19 at 16 26 32" src="https://user-images.githubusercontent.com/3584359/233125880-19b8ae39-0560-46f0-a2aa-1f4e74295046.png">
 
-![Design](/ss1.jpg?raw=true "")
-![Design2](/ss2.jpg?raw=true "")
+![ss1](https://github.com/serifenuruysal/Navwei-Android-App/assets/3584359/600bd83a-f453-479c-84ca-5643c69ef520)
+![ss2](https://github.com/serifenuruysal/Navwei-Android-App/assets/3584359/54db2d2c-640c-4c03-8a5d-ec19b25c9b66)
+
 
 This is the Navwei Android app project Version 2.
-
 Users can navigate through large malls or airports, discovering trends, events, and stores effortlessly.
 Approach: Clean Architecture
 
